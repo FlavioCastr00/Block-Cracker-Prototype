@@ -5,35 +5,49 @@ public class BallBehaviour : MonoBehaviour
     [SerializeField] private float speed = 3.0f;
 
     private Rigidbody rb;
+    private float maxSpeed = 8f;
+    private float verticalWallsImpulse = 0.02f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.linearVelocity = new Vector3(0, speed, 0);
+
+        Vector2 force = Vector2.zero;
+
+        force.x = 0f;
+        force.y = 1f;
+
+        rb.AddForce(force.normalized * speed);
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+        }    
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Get the collision normal
-        Vector3 normal = collision.contacts[0].normal;
+        Vector2 newForce = Vector2.zero;
 
-        // Reflect velocity along the surface
-        Vector3 reflectedVelocity = Vector3.Reflect(rb.linearVelocity, normal).normalized * speed;
-
-        // Paddle influence
         if (collision.gameObject.CompareTag("PlayerRight"))
-            reflectedVelocity.x = Random.Range(1f, 3f);
-
+        {
+            newForce.x = Random.Range(4f, 6f);
+        }
         else if (collision.gameObject.CompareTag("PlayerLeft"))
-            reflectedVelocity.x = Random.Range(-3f, -1f);
-
-        rb.linearVelocity = reflectedVelocity;
+        {
+            newForce.x = Random.Range(-6f, -4f);
+        }
+        else if (collision.gameObject.CompareTag("RightWall"))
+        {
+            newForce.x = -verticalWallsImpulse;
+        }
+        else if (collision.gameObject.CompareTag("LeftWall")) {
+            newForce.x = verticalWallsImpulse;
+        }
+        Debug.Log(rb.linearVelocity.magnitude);
+        rb.AddForce(newForce.normalized, ForceMode.Impulse);
     }
 }

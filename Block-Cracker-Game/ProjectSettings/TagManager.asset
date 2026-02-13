@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - HorizontalWall
   - PlayerMiddle
   - PlayerLeft
   - PlayerRight
-  - VerticalWall
+  - RightWall
+  - LeftWall
   layers:
   - Default
   - TransparentFX
