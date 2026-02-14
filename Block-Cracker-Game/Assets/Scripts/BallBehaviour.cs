@@ -6,7 +6,8 @@ public class BallBehaviour : MonoBehaviour
 
     private Rigidbody rb;
     private float maxSpeed = 8f;
-    private float verticalWallsImpulse = 0.02f;
+    private float minYSpeed = 1f;
+    private float verticalWallsImpulse = 0.01f;
 
     void Start()
     {
@@ -22,10 +23,28 @@ public class BallBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb.linearVelocity.magnitude > maxSpeed)
+        Vector2 velocity = rb.linearVelocity;
+
+        // Limit max speed
+        if (velocity.magnitude > maxSpeed)
         {
-            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
-        }    
+            velocity = velocity.normalized * maxSpeed;
+        }
+        
+        // Set min speed for the Y axis
+        if (Mathf.Abs(velocity.y) < minYSpeed)
+        {
+            float direction = Mathf.Sign(velocity.y);
+
+            if (direction == 0)
+            {
+                direction = 1;
+            }
+
+            velocity.y = direction * minYSpeed;
+        }
+
+        rb.linearVelocity = velocity;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -34,11 +53,11 @@ public class BallBehaviour : MonoBehaviour
 
         if (collision.gameObject.CompareTag("PlayerRight"))
         {
-            newForce.x = Random.Range(4f, 6f);
+            newForce.x = Random.Range(3f, 5f);
         }
         else if (collision.gameObject.CompareTag("PlayerLeft"))
         {
-            newForce.x = Random.Range(-6f, -4f);
+            newForce.x = Random.Range(-5f, -3f);
         }
         else if (collision.gameObject.CompareTag("RightWall"))
         {

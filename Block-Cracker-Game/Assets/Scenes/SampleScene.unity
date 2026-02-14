@@ -3089,7 +3089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df1b222c5ecd6c4b92ccffd2bb0716c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallBehaviour
-  speed: 250
+  speed: 200
 --- !u!54 &1488997846
 Rigidbody:
   m_ObjectHideFlags: 0
