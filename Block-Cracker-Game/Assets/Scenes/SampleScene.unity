@@ -341,6 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 237536600}
+  - component: {fileID: 237536601}
   m_Layer: 0
   m_Name: Row 3
   m_TagString: Untagged
@@ -368,6 +369,24 @@ Transform:
   - {fileID: 613045470}
   m_Father: {fileID: 1354293216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &237536601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237536599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a3e59abe29d484ba846bd981c635d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RowManager
+  bricks:
+  - {fileID: 906767397}
+  - {fileID: 1087808606}
+  - {fileID: 455258025}
+  - {fileID: 956314496}
+  - {fileID: 613045469}
 --- !u!1 &275992770
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 275992771}
+  - component: {fileID: 275992772}
   m_Layer: 0
   m_Name: Row 2
   m_TagString: Untagged
@@ -404,6 +424,24 @@ Transform:
   - {fileID: 7941341}
   m_Father: {fileID: 1354293216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275992772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275992770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a3e59abe29d484ba846bd981c635d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RowManager
+  bricks:
+  - {fileID: 559685220}
+  - {fileID: 1745535093}
+  - {fileID: 583199559}
+  - {fileID: 1979227353}
+  - {fileID: 7941340}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494661872}
+  - component: {fileID: 494661873}
   m_Layer: 0
   m_Name: Row 1
   m_TagString: Untagged
@@ -829,6 +868,24 @@ Transform:
   - {fileID: 1523197380}
   m_Father: {fileID: 1354293216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &494661873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494661871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a3e59abe29d484ba846bd981c635d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RowManager
+  bricks:
+  - {fileID: 1195478982}
+  - {fileID: 1278107581}
+  - {fileID: 1526605082}
+  - {fileID: 735983558}
+  - {fileID: 1523197379}
 --- !u!1 &559685220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,6 +2780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326614453}
+  - component: {fileID: 1326614454}
   m_Layer: 0
   m_Name: Row 4
   m_TagString: Untagged
@@ -2750,6 +2808,24 @@ Transform:
   - {fileID: 1121001139}
   m_Father: {fileID: 1354293216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1326614454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326614452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a3e59abe29d484ba846bd981c635d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RowManager
+  bricks:
+  - {fileID: 1649941250}
+  - {fileID: 683058216}
+  - {fileID: 1052424482}
+  - {fileID: 1348445962}
+  - {fileID: 1121001138}
 --- !u!1 &1330506883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,6 +3013,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354293216}
+  - component: {fileID: 1354293218}
+  - component: {fileID: 1354293217}
   m_Layer: 0
   m_Name: Bricks
   m_TagString: Untagged
@@ -2953,7 +3031,7 @@ Transform:
   m_GameObject: {fileID: 1354293215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2963,6 +3041,36 @@ Transform:
   - {fileID: 1326614453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354293217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354293215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7a893ef7fd51446a6bfcccdac3472a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BricksManager
+  rows:
+  - {fileID: 494661871}
+  - {fileID: 275992770}
+  - {fileID: 237536599}
+  - {fileID: 1326614452}
+  brickCount: 0
+--- !u!114 &1354293218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354293215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ecfa96c718a9343819d9c8ccea34c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrickManager
 --- !u!1 &1488997840
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,7 +3581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab32b3880d4e5b94490cbf7c2388223f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
+  speed: 7
 --- !u!1 &1649941250
 GameObject:
   m_ObjectHideFlags: 0
