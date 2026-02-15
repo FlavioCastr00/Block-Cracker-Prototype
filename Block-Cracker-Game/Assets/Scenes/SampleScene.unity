@@ -3013,10 +3013,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354293216}
-  - component: {fileID: 1354293218}
   - component: {fileID: 1354293217}
   m_Layer: 0
-  m_Name: Bricks
+  m_Name: Bricks Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3058,19 +3057,6 @@ MonoBehaviour:
   - {fileID: 275992770}
   - {fileID: 237536599}
   - {fileID: 1326614452}
-  brickCount: 0
---- !u!114 &1354293218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354293215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85ecfa96c718a9343819d9c8ccea34c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BrickManager
 --- !u!1 &1488997840
 GameObject:
   m_ObjectHideFlags: 0
