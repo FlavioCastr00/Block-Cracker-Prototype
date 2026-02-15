@@ -4,23 +4,13 @@ public class BrickPoolManager : MonoBehaviour
 {
     public GameObject[] bricks;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        SetBrickActive();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private int specialBrickChance = 10;
 
     public void SetBrickActive()
     {
-        int blockChanceRatio = Random.Range(1, 11);
+        int roll = Random.Range(1, specialBrickChance + 1);
 
-        if (blockChanceRatio <= 2 )
+        if (roll == 1 )
         {
             int randomBlockIndex = Random.Range(1, bricks.Length);
             bricks[randomBlockIndex].SetActive(true);

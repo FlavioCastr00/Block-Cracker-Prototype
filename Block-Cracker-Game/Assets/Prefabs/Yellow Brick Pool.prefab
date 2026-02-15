@@ -939,3 +939,4 @@ MonoBehaviour:
   - {fileID: 272665594271087741}
   - {fileID: 4159674089779051372}
   - {fileID: 347907935109784861}
+  specialBrickChance: 11

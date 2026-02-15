@@ -759,6 +759,7 @@ MonoBehaviour:
   - {fileID: 5240927683032015430}
   - {fileID: 3040826305617339558}
   - {fileID: 3918509743116278704}
+  specialBrickChance: 11
 --- !u!1 &7381377307329297370
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BricksManager : MonoBehaviour
 {
-    public GameObject[] rows;
+    public GameObject[] brickPools;
     
     private int brickCount;
     private float speed = 2f;
@@ -33,10 +33,10 @@ public class BricksManager : MonoBehaviour
     {
         gameObject.transform.position = outOfViewPos;
 
-        for ( int i = 0; i < rows.Length; i++ )
+        for ( int i = 0; i < brickPools.Length; i++ )
         {
-            RowManager row = rows[i].GetComponent<RowManager>();
-            row.SetBricksActive();
+            BrickPoolManager poolManager = brickPools[i].GetComponent<BrickPoolManager>();
+            poolManager.SetBrickActive();
         }
     }
 }
