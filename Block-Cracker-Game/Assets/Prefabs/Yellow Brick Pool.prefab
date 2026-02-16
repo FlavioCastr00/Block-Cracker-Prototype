@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2869189244417488057}
   - component: {fileID: 248242787048535305}
   - component: {fileID: 5236001748445078409}
-  - component: {fileID: 5720335193665961621}
+  - component: {fileID: 4262121379542644620}
   m_Layer: 0
   m_Name: Life Brick
   m_TagString: Untagged
@@ -115,7 +115,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5720335193665961621
+--- !u!114 &4262121379542644620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,9 +124,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 272665594271087741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cb0e7519e3f8cf4aa2ca07b67c93531, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  m_EditorClassIdentifier: Assembly-CSharp::LifeBrick
+  durability: 20
+  damageToTake: 10
 --- !u!1 &347907935109784861
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  durability: 10
+  damageToTake: 10
 --- !u!1 &1262494713006417813
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  durability: 10
+  damageToTake: 10
 --- !u!1 &4159674089779051372
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  durability: 10
+  damageToTake: 10
 --- !u!1 &4447682437299636700
 GameObject:
   m_ObjectHideFlags: 0

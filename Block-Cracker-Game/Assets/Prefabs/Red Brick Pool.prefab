@@ -292,6 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  durability: 10
+  damageToTake: 10
 --- !u!1 &2432974915608496885
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  durability: 10
+  damageToTake: 10
 --- !u!1 &5844274229574318355
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +524,7 @@ GameObject:
   - component: {fileID: 1213244620504795941}
   - component: {fileID: 1833911164081479201}
   - component: {fileID: 2178480108156729948}
-  - component: {fileID: 5187177007441171145}
+  - component: {fileID: 6384314866791447815}
   m_Layer: 0
   m_Name: Life Brick
   m_TagString: Untagged
@@ -623,7 +627,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5187177007441171145
+--- !u!114 &6384314866791447815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -632,9 +636,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5844274229574318355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cb0e7519e3f8cf4aa2ca07b67c93531, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  m_EditorClassIdentifier: Assembly-CSharp::LifeBrick
+  durability: 20
+  damageToTake: 10
 --- !u!1 &6455452737493855476
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,3 +946,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
+  durability: 10
+  damageToTake: 10

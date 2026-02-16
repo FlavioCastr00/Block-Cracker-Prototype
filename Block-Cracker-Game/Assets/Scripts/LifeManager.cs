@@ -7,6 +7,26 @@ public class LifeManager : MonoBehaviour
 
     private int life = 3;
 
+    public void GainLife(int amount)
+    {
+        if (life == 3)
+        {
+            return;
+        }
+
+        life += amount;
+
+        if (life == 3)
+        {
+            lifeObjects[0].SetActive(true);
+        }
+
+        if (life == 2)
+        {
+            lifeObjects[1].SetActive(true);
+        }
+    }
+
     public void LoseLife(int amount)
     {
         life -= amount;
