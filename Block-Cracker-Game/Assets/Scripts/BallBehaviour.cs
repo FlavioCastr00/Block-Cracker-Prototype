@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class BallBehaviour : MonoBehaviour
 {
+    public LifeManager lifeManager;
+
     [SerializeField] private float speed = 3.0f;
 
     private Rigidbody rb;
+    private Vector3 ballSpawnPoint = new Vector3(0, -2, 0);
     private float maxSpeed = 8f;
     private float minYSpeed = 1f;
     private float verticalWallsImpulse = 0.01f;
+    private bool isGamePaused;
 
     void Start()
     {
+        isGamePaused = true;
+
         rb = GetComponent<Rigidbody>();
         rb.linearVelocity = Vector3.zero;
     }
@@ -68,6 +74,12 @@ public class BallBehaviour : MonoBehaviour
         else if (collision.gameObject.CompareTag("LeftWall")) {
             newForce.x = verticalWallsImpulse;
         }
+        else if (collision.gameObject.CompareTag("Finish"))
+        {
+            ResetGame();
+            lifeManager.LoseLife(1);
+        }
+
         Debug.Log(rb.linearVelocity.magnitude);
         rb.AddForce(newForce.normalized, ForceMode.Impulse);
     }
@@ -82,5 +94,12 @@ public class BallBehaviour : MonoBehaviour
         force.y = 1f;
 
         rb.AddForce(force.normalized * speed);
+    }
+
+    private void ResetGame()
+    {
+        isGamePaused = true;
+        rb.linearVelocity = Vector3.zero;
+        gameObject.transform.position = ballSpawnPoint;
     }
 }
