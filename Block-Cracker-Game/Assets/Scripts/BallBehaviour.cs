@@ -12,13 +12,15 @@ public class BallBehaviour : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.linearVelocity = Vector3.zero;
+    }
 
-        Vector2 force = Vector2.zero;
-
-        force.x = 0f;
-        force.y = 1f;
-
-        rb.AddForce(force.normalized * speed);
+    void Update()
+    {
+        if (isGamePaused && Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            ThrowBall();
+        }
     }
 
     void FixedUpdate()
@@ -32,7 +34,7 @@ public class BallBehaviour : MonoBehaviour
         }
         
         // Set min speed for the Y axis
-        if (Mathf.Abs(velocity.y) < minYSpeed)
+        if (Mathf.Abs(velocity.y) < minYSpeed && !isGamePaused)
         {
             float direction = Mathf.Sign(velocity.y);
 
@@ -68,5 +70,17 @@ public class BallBehaviour : MonoBehaviour
         }
         Debug.Log(rb.linearVelocity.magnitude);
         rb.AddForce(newForce.normalized, ForceMode.Impulse);
+    }
+
+    private void ThrowBall()
+    {
+        isGamePaused = false;
+
+        Vector2 force = Vector2.zero;
+
+        force.x = 0f;
+        force.y = 1f;
+
+        rb.AddForce(force.normalized * speed);
     }
 }
