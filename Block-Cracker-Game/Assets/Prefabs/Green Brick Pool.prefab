@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 8649891261186786550}
   - component: {fileID: 1356981449569504519}
   - component: {fileID: 8680267650948957820}
-  - component: {fileID: 8609358835925133154}
+  - component: {fileID: 150353133055346714}
   m_Layer: 0
   m_Name: Paddle Brick
   m_TagString: Untagged
@@ -316,7 +316,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8609358835925133154
+--- !u!114 &150353133055346714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,10 +325,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3040826305617339558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 909e1d1af6f1b7d44aaf7e54106b6660, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
-  durability: 10
+  m_EditorClassIdentifier: Assembly-CSharp::PaddleBrick
+  durability: 20
   damageToTake: 10
 --- !u!1 &3918509743116278704
 GameObject:

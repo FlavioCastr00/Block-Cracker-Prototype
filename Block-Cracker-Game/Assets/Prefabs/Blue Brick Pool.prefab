@@ -528,7 +528,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LifeBrick
   durability: 20
   damageToTake: 10
-  LifeManager: {fileID: 0}
 --- !u!1 &4882701126100105996
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +720,7 @@ GameObject:
   - component: {fileID: 6465295971937333729}
   - component: {fileID: 1436716722091507117}
   - component: {fileID: 3803829812337499598}
-  - component: {fileID: 2087713071674298397}
+  - component: {fileID: 7117934521236704343}
   m_Layer: 0
   m_Name: Paddle Brick
   m_TagString: Untagged
@@ -823,7 +822,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2087713071674298397
+--- !u!114 &7117934521236704343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -832,10 +831,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5416957549182223139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 909e1d1af6f1b7d44aaf7e54106b6660, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
-  durability: 10
+  m_EditorClassIdentifier: Assembly-CSharp::PaddleBrick
+  durability: 20
   damageToTake: 10
 --- !u!1 &8183762348184101099
 GameObject:
