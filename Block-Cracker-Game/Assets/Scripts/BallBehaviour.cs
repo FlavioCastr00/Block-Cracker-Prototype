@@ -4,13 +4,15 @@ public class BallBehaviour : MonoBehaviour
 {
     public LifeManager lifeManager;
 
-    [SerializeField] private float speed = 3.0f;
+    [SerializeField] protected float speed = 3.0f;
 
-    private Rigidbody rb;
-    private Vector3 ballSpawnPoint = new Vector3(0, -2, 0);
-    private float maxSpeed = 8f;
-    private float minYSpeed = 1f;
-    private float verticalWallsImpulse = 0.01f;
+    protected Rigidbody rb;
+    protected Vector3 ballSpawnPoint = new Vector3(0, -2, 0);
+    protected float maxSpeed = 7.0f;
+    protected float minSpeed = 4.0f;
+    protected float minYSpeed = 2f;
+    protected float verticalWallsImpulse = 0.01f;
+    
     private bool isGamePaused;
 
     void Start()
@@ -29,7 +31,7 @@ public class BallBehaviour : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         Vector2 velocity = rb.linearVelocity;
 
@@ -37,6 +39,12 @@ public class BallBehaviour : MonoBehaviour
         if (velocity.magnitude > maxSpeed)
         {
             velocity = velocity.normalized * maxSpeed;
+        }
+
+        // Limit min speed
+        if (velocity.magnitude < minSpeed)
+        {
+            velocity = velocity.normalized * minSpeed;
         }
         
         // Set min speed for the Y axis
@@ -46,7 +54,7 @@ public class BallBehaviour : MonoBehaviour
 
             if (direction == 0)
             {
-                direction = 1;
+                direction = 2;
             }
 
             velocity.y = direction * minYSpeed;
@@ -55,7 +63,7 @@ public class BallBehaviour : MonoBehaviour
         rb.linearVelocity = velocity;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected void OnCollisionEnter(Collision collision)
     {
         Vector2 newForce = Vector2.zero;
 
@@ -76,15 +84,13 @@ public class BallBehaviour : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Finish"))
         {
-            ResetGame();
-            lifeManager.LoseLife(1);
+            gameObject.SetActive(false);
         }
-
         Debug.Log(rb.linearVelocity.magnitude);
         rb.AddForce(newForce.normalized, ForceMode.Impulse);
     }
 
-    private void ThrowBall()
+    protected virtual void ThrowBall()
     {
         isGamePaused = false;
 
@@ -96,7 +102,7 @@ public class BallBehaviour : MonoBehaviour
         rb.AddForce(force.normalized * speed);
     }
 
-    private void ResetGame()
+    public void ResetGame()
     {
         isGamePaused = true;
         rb.linearVelocity = Vector3.zero;

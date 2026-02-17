@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 771429093425454864}
   - component: {fileID: 570641908090915196}
   - component: {fileID: 7961231835372586732}
-  - component: {fileID: 6684010456175324373}
+  - component: {fileID: 3696380568276563992}
   m_Layer: 0
   m_Name: Ball Brick
   m_TagString: Untagged
@@ -280,7 +280,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6684010456175324373
+--- !u!114 &3696380568276563992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,10 +289,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2411645637849132973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e30fb00078c204c87af1fe60366e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1122b7fa4d05a7244a82e5ae0b44f699, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
-  durability: 10
+  m_EditorClassIdentifier: Assembly-CSharp::BallBrick
+  durability: 20
   damageToTake: 10
 --- !u!1 &2432974915608496885
 GameObject:
