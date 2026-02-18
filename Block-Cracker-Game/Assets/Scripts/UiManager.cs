@@ -7,14 +7,20 @@ using UnityEngine.SceneManagement;
 public class UiManager : MonoBehaviour
 {
     public TextMeshProUGUI currentScoreText;
+    public TextMeshProUGUI highestScoreText;
     public GameObject gameOverPanel;
 
     private int currentScore = 0;
+    private int highestScore = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GameManager.Instance.LoadHighestScore();
+        highestScore = GameManager.Instance.highestScore;
+
         currentScoreText.text = currentScore.ToString();
+        highestScoreText.text = highestScore.ToString();
     }
 
     public void UpdateCurrentScore(int amount)
@@ -25,6 +31,12 @@ public class UiManager : MonoBehaviour
 
     public void SetGameOverPannelActive()
     {
+        if (currentScore > highestScore)
+        {
+            GameManager.Instance.highestScore = currentScore;
+            GameManager.Instance.SaveHighestScore();
+
+        }
         gameOverPanel.SetActive(true);
     }
 
