@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LifeManager : MonoBehaviour
 {
+    public UiManager uiManager;
     public GameObject[] lifeObjects;
     public GameObject playerBallPool;
     public bool isGameOver = false;
@@ -58,6 +59,7 @@ public class LifeManager : MonoBehaviour
         {
             lifeObjects[2].SetActive(false);
             isGameOver = true;
+            uiManager.SetGameOverPannelActive();
         }
     }
 }

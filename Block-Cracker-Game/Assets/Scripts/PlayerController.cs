@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public LifeManager lifeManager;
+
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float powerUpCountDown = 7.0f;
 
@@ -11,18 +13,15 @@ public class PlayerController : MonoBehaviour
     private float powerUpTimer = 0.0f;
     private bool isPowerUpActive = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         float moveX = Input.GetAxis("Horizontal");
 
-        transform.Translate(Vector2.right * moveX * speed *  Time.deltaTime);
+        if (lifeManager.isGameOver == false)
+        {
+            transform.Translate(Vector2.right * moveX * speed * Time.deltaTime);
+        }
 
         // Handle Game Bounds
         if (gameObject.transform.position.x >  xBound)

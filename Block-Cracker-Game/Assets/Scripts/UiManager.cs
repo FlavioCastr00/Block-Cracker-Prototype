@@ -1,9 +1,13 @@
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class UiManager : MonoBehaviour
 {
     public TextMeshProUGUI currentScoreText;
+    public GameObject gameOverPanel;
 
     private int currentScore = 0;
 
@@ -17,5 +21,15 @@ public class UiManager : MonoBehaviour
     {
         currentScore += amount;
         currentScoreText.text = currentScore.ToString();
+    }
+
+    public void SetGameOverPannelActive()
+    {
+        gameOverPanel.SetActive(true);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

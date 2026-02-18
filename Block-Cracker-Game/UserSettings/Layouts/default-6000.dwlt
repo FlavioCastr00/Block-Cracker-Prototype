@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Console
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -2424,7 +2424,7 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 44394
+      - m_Data: 31958
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
@@ -2525,14 +2525,14 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 46744
-    - m_Data: 46746
-    - m_Data: 46748
-    - m_Data: 46750
-    - m_Data: 46752
-    - m_Data: 46754
-    - m_Data: 46756
-    - m_Data: 46758
+    - m_Data: 46796
+    - m_Data: 46798
+    - m_Data: 46800
+    - m_Data: 46802
+    - m_Data: 46804
+    - m_Data: 46806
+    - m_Data: 46808
+    - m_Data: 46810
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2559,21 +2559,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 33}
     m_SelectedIDs:
-    - m_Data: 44394
+    - m_Data: 31958
     m_LastClickedID:
-      m_Data: 44394
+      m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 46744
-    - m_Data: 46746
-    - m_Data: 46748
-    - m_Data: 46750
-    - m_Data: 46752
-    - m_Data: 46754
-    - m_Data: 46756
-    - m_Data: 46758
+    - m_Data: 46796
+    - m_Data: 46798
+    - m_Data: 46800
+    - m_Data: 46802
+    - m_Data: 46804
+    - m_Data: 46806
+    - m_Data: 46808
+    - m_Data: 46810
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2601,8 +2601,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 44394
-    m_LastClickedInstanceID: 44394
+    - m_Data: 31958
+    m_LastClickedInstanceID: 31958
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
@@ -2679,7 +2679,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 242
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
