@@ -4,9 +4,10 @@ public class BallBrick : BasicBrick
 {
     private BallsPool ballsPool;
 
-    void OnEnable()
+    protected override void OnEnable()
     {
-        ballsPool = FindFirstObjectByType<BallsPool>().GetComponent<BallsPool>();  
+        base.OnEnable();
+        ballsPool = FindFirstObjectByType<BallsPool>().GetComponent<BallsPool>();
     }
 
     protected override void TakeDamage()
@@ -16,6 +17,7 @@ public class BallBrick : BasicBrick
         if (durability <= 0)
         {
             gameObject.SetActive(false);
+            uiManager.UpdateCurrentScore(points);
             ballsPool.GetBall();
         }
     }

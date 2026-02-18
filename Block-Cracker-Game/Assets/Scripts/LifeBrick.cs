@@ -4,9 +4,10 @@ public class LifeBrick : BasicBrick
 {
     private LifeManager LifeManager;
 
-    void OnEnable()
+    protected override void OnEnable()
     {
-        LifeManager = FindFirstObjectByType<LifeManager>().GetComponent<LifeManager>();    
+        base.OnEnable();
+        LifeManager = FindFirstObjectByType<LifeManager>().GetComponent<LifeManager>();
     }
 
     protected override void TakeDamage()
@@ -16,6 +17,7 @@ public class LifeBrick : BasicBrick
         if (durability <= 0)
         {
             gameObject.SetActive(false);
+            uiManager.UpdateCurrentScore(points);
             LifeManager.GainLife(1);
         }
     }

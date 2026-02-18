@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LifeBrick
   durability: 20
   damageToTake: 10
+  points: 25
 --- !u!1 &347907935109784861
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallBrick
   durability: 20
   damageToTake: 10
+  points: 25
 --- !u!1 &1262494713006417813
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BasicBrick
   durability: 10
   damageToTake: 10
+  points: 15
 --- !u!1 &4159674089779051372
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PaddleBrick
   durability: 20
   damageToTake: 10
+  points: 25
 --- !u!1 &4447682437299636700
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,9 +4,10 @@ public class PaddleBrick : BasicBrick
 {
     private PlayerController playerController;
 
-    void OnEnable()
+    protected override void OnEnable()
     {
-        playerController = FindFirstObjectByType<PlayerController>().GetComponent<PlayerController>();    
+        base.OnEnable();
+        playerController = FindFirstObjectByType<PlayerController>().GetComponent<PlayerController>();
     }
 
     protected override void TakeDamage()
@@ -16,6 +17,7 @@ public class PaddleBrick : BasicBrick
         if (durability <= 0)
         {
             gameObject.SetActive(false);
+            uiManager.UpdateCurrentScore(points);
             playerController.SetPaddlePowerUpActive();
         }
     }
